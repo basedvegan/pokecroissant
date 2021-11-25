@@ -1,14 +1,12 @@
-import "./App.css";
+import React from 'react'
 import { useState } from "react";
 import { useEffect } from "react";
+// import { Link } from 'react-router-dom';
 import Pokecard from "./components/Pokecard";
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-//import Home from "./components/Home";
 
-function App() {
-  // const url = "https://play.pokemonshowdown.com/data/pokedex.json";
+export default function Home() {
 
-  const [pokemon, setPokemon] = useState([]);
+    const [pokemon, setPokemon] = useState([]);
 
   const [pokename, setPokename] = useState("pikachu");
 
@@ -44,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <div className="cards">
+      
 
 <Pokecard props={pokemon}/>
 
@@ -58,10 +57,8 @@ function App() {
         <input id="input" type="text" placeholder="pokemon name"></input>
       </form>
       <img src={image.front_default} alt=""></img>
+
     </div>
   );
+
 }
-
-export default App;
-
-
