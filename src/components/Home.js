@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from "react";
 import { useEffect } from "react";
-// import { Link } from 'react-router-dom';
-import Pokecard from "./components/Pokecard";
+ import { Link } from 'react-router-dom';
+import Pokecard from './Pokecard';
 
 export default function Home() {
 
@@ -27,9 +27,9 @@ export default function Home() {
     };
   }, [pokename]);
 
-  //console.log(image.front_default);
+  console.log(pokemon);
 
-  //const arrayOfObj = Object.entries(pokemon).map((e) => ( { [e[0]]: e[1] } ));
+  // const arrayOfObj = Object.entries(pokemon).map((e) => ( { [e[0]]: e[1] } ));
   // console.log(arrayOfObj)
 // const newArrayOfObj = Object.values(arrayOfObj).map((e) => ( { [e[0]]: e[1] } ));
   const handleForm = (e) => {
@@ -44,7 +44,7 @@ export default function Home() {
       <div className="cards">
       
 
-<Pokecard props={pokemon}/>
+{/* <Pokecard props={pokemon}/> */}
 
 
         {/* {Object.entries(pokemon).map((pokeObj) => {
@@ -53,10 +53,14 @@ export default function Home() {
         />
       })} */}
       </div>
+      <Link to ="/"><button>Get The Fuck Out!!!</button></Link> 
+      <img src={image.front_default} alt=""></img>
+      <h1>{pokemon.name}</h1>
       <form onSubmit={handleForm}>
         <input id="input" type="text" placeholder="pokemon name"></input>
       </form>
-      <img src={image.front_default} alt=""></img>
+      <h1>{pokemon.id}</h1>
+      
 
     </div>
   );
