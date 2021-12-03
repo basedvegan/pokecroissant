@@ -45,20 +45,9 @@ export default function Home() {
   };
 
   return (
-    <div className="App">
+    <div className="homeApp">
+      <div className="nav">
       <Audio/>
-      <div className="cards">
-        {/* <Pokecard props={pokemon}/> */}
-
-        {/* {Object.entries(pokemon).map((pokeObj) => {
-          console.log(pokeObj)
-        return <Pokecard props={pokeObj} 
-        />
-      })} */}
-      </div>
-      {/* <Link to="/">
-        <button>Get The Fuck Out!!!</button>
-      </Link> */}
       <button
         onClick={() =>
           signOut(authentication).then(() => {
@@ -68,12 +57,21 @@ export default function Home() {
       >
         Signout for reals 
       </button>
-      <img src={image.front_default} alt=""></img>
+      </div>
+      <div className="center-box">
+      <div className="cards">
+      <img id="pokeimg" src={image.front_default} alt=""></img>
       <h1>{pokemon.name}</h1>
+      <h1>{pokemon.id}</h1>
+      </div>
+      
+      
+      
       <form onSubmit={handleForm}>
         <input id="input" type="text" placeholder="pokemon name"></input>
       </form>
-      <h1>{pokemon.id}</h1>
+      </div>
+     
     </div>
   );
 }
