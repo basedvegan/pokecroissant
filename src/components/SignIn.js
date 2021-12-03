@@ -29,8 +29,11 @@ export default function SignIn() {
         
         <div className="signin-page">
             
+        <div className="title-nav">   
             <img className="title" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokemon-Logo.png"></img>
-            <h1 className="team">Team Builder</h1>
+            <div><h1 className="line-1 anim-typewriter">Team Builder</h1></div>
+        </div>
+       
         <div className="main-con-signin">
             
             <button className="signin" onClick = {signInWithGoogle}><img className="pokeball" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokeball.png" alt="" height="500px" width="500px"></img><h1 className="click-ball">Sign In</h1></button>
