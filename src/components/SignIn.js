@@ -4,6 +4,7 @@ import { authentication } from '../firebase-config';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useNavigate } from 'react-router';
 
+
 export default function SignIn() {
 
 
@@ -29,6 +30,7 @@ export default function SignIn() {
         <div className="signin-page">
             
             <img className="title" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokemon-Logo.png"></img>
+            <h1 className="team">Team Builder</h1>
         <div className="main-con-signin">
             
             <button className="signin" onClick = {signInWithGoogle}><img className="pokeball" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokeball.png" alt="" height="500px" width="500px"></img><h1 className="click-ball">Sign In</h1></button>

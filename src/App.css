@@ -4,25 +4,25 @@
   height: 100vh;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .pokemon-name {
   height: 200px;
   width: 200px;
 }
 
-.cards {
-  height: 300px;
-  width: 300px;
-}
 
 .signin-page {
   text-align: center;
   background-color: aqua;
+  background-size: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-image: url("https://cdna.artstation.com/p/assets/images/images/037/307/064/large/albert-hernandez-pokemon-001.jpg?1620054739");
+  position: relative;
 }
 
 .main-con-signin {
@@ -37,6 +37,14 @@ gap: 20px;
   height: 500px;
   width: 500px;
 }
+
+.team {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  top:400px;
+
+}
+
 
 .pokeball {
   border-radius: 50%;
@@ -76,6 +84,37 @@ gap: 20px;
   display: flex;
   justify-content: center;
   position: relative;
+  font-family: 'Press Start 2P', cursive;
 }
 
-/* */
+/* Home */
+
+.homeApp {
+  background: #fbfb;
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.center-box {
+  background:green;
+  height: 100%;
+}
+
+
+.cards {
+  height: 300px;
+  width: 300px;
+  border: solid 5px black;
+  background-image: url('https://images.template.net/wp-content/uploads/2015/11/24201243/Pikachu-Playing-Wii-Pokemon-Download.jpg');
+  background-position: center;
+}
+
+#pokeimg {
+  border: 3px solid black;
+  border-radius: 50%;
+  background: gray;
+}
