@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router';
 
 export default function SignIn() {
 
+
     let navigate = useNavigate()
 
     const signInWithGoogle = ()=> {
@@ -20,13 +21,21 @@ export default function SignIn() {
             console.log(err)
         })
     }
+    // <audio id="my_audio" src="https://vgmsite.com/soundtracks/pokemon-gameboy-sound-collection/vvdpydwp/101-opening.mp3" loop="loop"></audio>
+    
 
     return (
-        <div>
-            sign In MotherFucker!!!!
-            <button onClick = {signInWithGoogle}>Niongle</button>
+        
+        <div className="signin-page">
+            
+            <img className="title" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokemon-Logo.png"></img>
+        <div className="main-con-signin">
+            
+            <button className="signin" onClick = {signInWithGoogle}><img className="pokeball" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokeball.png" alt="" height="500px" width="500px"></img><h1 className="click-ball">Sign In</h1></button>
+            {/* <img className="pokeball" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokeball.png" alt="" height="100px" width="100px"></img> */}
             {/* <Link to = "/info"><button>Please Sign in</button></Link> */}
             
+        </div>
         </div>
     )
 }

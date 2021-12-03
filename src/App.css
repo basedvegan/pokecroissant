@@ -14,3 +14,68 @@
   width: 300px;
 }
 
+.signin-page {
+  text-align: center;
+  background-color: aqua;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/037/307/064/large/albert-hernandez-pokemon-001.jpg?1620054739");
+}
+
+.main-con-signin {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
+.title {
+  mix-blend-mode: multiply;
+  height: 500px;
+  width: 500px;
+}
+
+.pokeball {
+  border-radius: 50%;
+  mix-blend-mode: multiply;
+  position:absolute;
+  bottom:-20px;
+}
+
+.pokeball:hover {
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+.pokeball:active {
+  transform: rotate(45deg);
+}
+
+.click-ball {
+  position: absolute;
+  top:50px;
+  color:#ffffff;
+}
+.click-ball:hover{
+  cursor: pointer;
+}
+
+.audio {
+  height: 30px;
+  width: 500px;
+  margin-top: 50px;
+}
+
+.signin {
+  border-radius: 50%;
+  height: 450px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* */
