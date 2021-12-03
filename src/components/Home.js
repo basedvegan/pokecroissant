@@ -6,7 +6,7 @@ import Pokecard from "./Pokecard";
 import { getAuth, signOut } from "firebase/auth";
 import { authentication } from "../firebase-config"
 import { useNavigate } from "react-router";
-
+import Audio from "./Audio";
 // const auth = getAuth();
 
 export default function Home() {
@@ -46,6 +46,7 @@ export default function Home() {
 
   return (
     <div className="App">
+      <Audio/>
       <div className="cards">
         {/* <Pokecard props={pokemon}/> */}
 
