@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: aqua;
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/037/307/064/large/albert-hernandez-pokemon-001.jpg?1620054739");
   height: 100vh;
 }
 
@@ -13,15 +13,15 @@
 
 
 .signin-page {
-  text-align: center;
-  background-color: aqua;
-  background-size: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url("https://cdna.artstation.com/p/assets/images/images/037/307/064/large/albert-hernandez-pokemon-001.jpg?1620054739");
+    text-align: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
   
 }
 
@@ -31,6 +31,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 60%;
+  top: -20px;
 }
 
 .line-1 {
@@ -71,7 +73,7 @@ gap: 20px;
 .title {
   mix-blend-mode: multiply;
   height: 500px;
-  width: 500px;
+  width: 60%;
 }
 
 .team {
@@ -83,10 +85,13 @@ gap: 20px;
 
 
 .pokeball {
-  border-radius: 50%;
-  mix-blend-mode: multiply;
-  position:absolute;
-  bottom:-20px;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    bottom: -20px;
+    top: -30px;
+    height: 375px;
+    width: 375px;
 }
 
 .pokeball:hover {
@@ -116,13 +121,14 @@ gap: 20px;
 }
 
 .signin {
-  border-radius: 50%;
-  height: 450px;
-  width: 450px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  font-family: 'Press Start 2P', cursive;
+border-radius: 50%;
+    height: 325px;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Home */
