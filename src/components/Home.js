@@ -17,6 +17,13 @@ export default function Home() {
   const [image, setImage] = useState(
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
   );
+
+const team = []
+
+const [teamCard, setTeamCard] = useState([])
+
+// const [team, setTeam] = useState([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,7 +39,20 @@ export default function Home() {
     };
   }, [pokename]);
 
-  console.log(pokemon);
+  // console.log(pokemon);
+
+useEffect(()=> {
+// team.push(document.getElementById("pokeimg").src)
+setTeamCard(team)
+console.log(teamCard)
+
+return () => {
+  //cleanup for when the component unmounts
+};
+}, []);
+
+
+
 
   // const arrayOfObj = Object.entries(pokemon).map((e) => ( { [e[0]]: e[1] } ));
   // console.log(arrayOfObj)
@@ -43,6 +63,14 @@ export default function Home() {
     let value = document.getElementById("input").value;
     setPokename(value);
   };
+
+  function addImgToTeam() {
+   team.push(document.getElementById("pokeimg").src)
+  //  team.push(image.front_default);
+
+    console.log(team)
+
+  }
 
   return (
     <div className="homeApp">
@@ -64,26 +92,22 @@ export default function Home() {
         </button>
       </div>
       <div className="center-box">
-        <div className="lineupCard">
-
-        </div>
         <div className="cards">
           <img id="pokeimg" src={image.front_default} alt=""></img>
           <h1>{pokemon.name}</h1>
           <h1>{pokemon.id}</h1>
-          <button>Add to Team</button>
+          <button onClick={addImgToTeam} >Add to Team</button>
+
+
         </div>
 
         <form onSubmit={handleForm}>
           <input id="input" type="text" placeholder="pokemon name"></input>
         </form>
-          <div className="teamCard">
-            <img alt=""></img>
-            <img alt=""></img>
-            <img alt=""></img>
-            <img alt=""></img>
-            <img alt=""></img>
-            <img alt=""></img>
+          <div className="teamCardContainer">
+          {/* {jobs.map((jobObj) => {
+                         return <Job props = {jobObj} />    */}
+
           </div>
 
       </div>

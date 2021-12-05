@@ -24,7 +24,7 @@ export default function SignIn() {
     <div className="signin-page">
       <div className="title-nav">
         <img
-          className="title"
+          className="title" alt=""
           src="https://64.media.tumblr.com/6962d905098fd971d023be44f5458cdd/b3ba978dc3dbe710-0a/s640x960/aa222be196e4bc3358645eeb74568a00d5616d9a.png"
         ></img>
         <div>
