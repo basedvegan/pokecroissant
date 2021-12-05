@@ -27,7 +27,7 @@ const Player = ({ url }) => {
 
   return (
     <div>
-      <button className="audio" onClick={toggle}>{playing ? "Pause" : "Play"}</button>
+      <button className="audio" onClick={toggle}>{playing ? " Pause " : " Play " }</button>
     </div>
   );
 };

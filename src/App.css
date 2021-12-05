@@ -125,8 +125,8 @@ gap: 20px;
 
 .audio {
   margin-top: 10px;
-  height: 20px;
-  width: 60px;
+  height: 40px;
+
 }
 
 .sign-out {
@@ -168,4 +168,12 @@ gap: 20px;
 .team-img {
   border: 3px solid white;
   border-radius: 50%;
+}
+
+button {
+  border-radius: 20px;
+  border-color: blue;
+  height: 40px;
+  font-family: 'Press Start 2P', cursive;
+  padding: 10px;
 }
