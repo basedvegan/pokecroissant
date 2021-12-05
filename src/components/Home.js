@@ -77,6 +77,15 @@ export default function Home() {
         <form onSubmit={handleForm}>
           <input id="input" type="text" placeholder="pokemon name"></input>
         </form>
+          <div className="teamCard">
+            <img alt=""></img>
+            <img alt=""></img>
+            <img alt=""></img>
+            <img alt=""></img>
+            <img alt=""></img>
+            <img alt=""></img>
+          </div>
+
       </div>
     </div>
   );
