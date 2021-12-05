@@ -72,6 +72,7 @@ export default function Home() {
           <img id="pokeimg" src={image.front_default} alt=""></img>
           <h1>{pokemon.name}</h1>
           <h1>{pokemon.id}</h1>
+          <button>Add to Team</button>
         </div>
 
         <form onSubmit={handleForm}>
