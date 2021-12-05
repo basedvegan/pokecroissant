@@ -31,6 +31,10 @@
   align-items: center;
 }
 
+.title {
+  width:100%;
+}
+
 .pokemon-name {
   height: 200px;
   width: 200px;
@@ -176,4 +180,15 @@ button {
   height: 40px;
   font-family: 'Press Start 2P', cursive;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .center-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .cards {
+    margin-top: 70%;
+  }
 }
