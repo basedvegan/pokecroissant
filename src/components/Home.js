@@ -6,6 +6,7 @@ import { getAuth, signOut } from "firebase/auth";
 import { authentication } from "../firebase-config";
 import { useNavigate } from "react-router";
 import Audio from "./Audio";
+import Team from "./Team";
 
 // const auth = getAuth();
 
@@ -18,15 +19,10 @@ export default function Home() {
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
   );
 
-const team = []
+  const [arr, setArr] = useState([]);
 
-const [arr, setArr] = useState([]);
 
-console.log(arr)
-
-// const [teamCard, setTeamCard] = useState([])
-
-// const [team, setTeam] = useState([]);
+  console.log(arr);
 
   const navigate = useNavigate();
 
@@ -45,22 +41,6 @@ console.log(arr)
 
   // console.log(pokemon);
 
-// useEffect(()=> {
-// // team.push(document.getElementById("pokeimg").src)
-// setTeamCard(team)
-// console.log(teamCard)
-
-// return () => {
-//   //cleanup for when the component unmounts
-// };
-// }, []);
-
-
-
-
-  // const arrayOfObj = Object.entries(pokemon).map((e) => ( { [e[0]]: e[1] } ));
-  // console.log(arrayOfObj)
-  // const newArrayOfObj = Object.values(arrayOfObj).map((e) => ( { [e[0]]: e[1] } ));
   const handleForm = (e) => {
     e.preventDefault();
     console.log("hi");
@@ -68,19 +48,11 @@ console.log(arr)
     setPokename(value);
   };
 
-  function addImgToTeam() {
-   team.push(document.getElementById("pokeimg").src)
-  //  team.push(image.front_default);
-
-    console.log(team)
-
-  }
-
   return (
     <div className="homeApp">
       <div className="nav">
         <Audio />
-        <button
+        <button className="sign-out"
           onClick={() =>
             signOut(authentication)
               .then(() => {
@@ -95,30 +67,31 @@ console.log(arr)
           Signout for reals
         </button>
       </div>
+      <div className="input-container">
+        <p className="line-1 anim-typewriter">Poké Search!</p>
+      <form onSubmit={handleForm}>
+        <input id="input" type="text" placeholder="pokemon name"></input>
+      </form>
+      </div>
       <div className="center-box">
         <div className="cards">
           <img id="pokeimg" src={image.front_default} alt=""></img>
           <h1>{pokemon.name}</h1>
           <h1>{pokemon.id}</h1>
-          <button onClick={addImgToTeam} >Add to Team</button>
-        </div>
-
-        <form onSubmit={handleForm}>
-          <input id="input" type="text" placeholder="pokemon name"></input>
-        </form>
-          <div className="teamCardContainer">
-          {/* {jobs.map((jobObj) => {
-                         return <Job props = {jobObj} />    */}
-
-          </div>
-
           <button
-        onClick={() => setArr((arr) => [...arr, image.front_default])}
-      >
-        push
-      </button>
-      <p>{JSON.stringify(arr)}</p>
-
+            onClick={() => setArr((arr) => [...arr, image.front_default])}
+          >
+            Add to Team
+          </button>
+        </div>
+        <div className="teamRoster">
+          <div className="img-container">
+            {/*Map out your job component below...  */}
+            {arr.map((img) => {
+              return <Team props={img} />;
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
