@@ -4,6 +4,7 @@ import Home from './components/Home';
 import SignIn from "./components/SignIn";
 import { authentication } from "./firebase-config"
 
+
 function App() {
   // const url = "https://play.pokemonshowdown.com/data/pokedex.json";
 

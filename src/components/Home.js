@@ -4,9 +4,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Pokecard from "./Pokecard";
 import { getAuth, signOut } from "firebase/auth";
-import { authentication } from "../firebase-config"
+import { authentication } from "../firebase-config";
 import { useNavigate } from "react-router";
 import Audio from "./Audio";
+
 // const auth = getAuth();
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
   const [image, setImage] = useState(
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
   );
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     //put effect here
@@ -47,31 +48,36 @@ export default function Home() {
   return (
     <div className="homeApp">
       <div className="nav">
-      <Audio/>
-      <button
-        onClick={() =>
-          signOut(authentication).then(() => {
-            console.log("sign out successful");
-          }).then(() => navigate('/')) .catch ((err) => {console.log(err)})
-        }
-      >
-        Signout for reals 
-      </button>
+        <Audio />
+        <button
+          onClick={() =>
+            signOut(authentication)
+              .then(() => {
+                console.log("sign out successful");
+              })
+              .then(() => navigate("/"))
+              .catch((err) => {
+                console.log(err);
+              })
+          }
+        >
+          Signout for reals
+        </button>
       </div>
       <div className="center-box">
-      <div className="cards">
-      <img id="pokeimg" src={image.front_default} alt=""></img>
-      <h1>{pokemon.name}</h1>
-      <h1>{pokemon.id}</h1>
+        <div className="lineupCard">
+
+        </div>
+        <div className="cards">
+          <img id="pokeimg" src={image.front_default} alt=""></img>
+          <h1>{pokemon.name}</h1>
+          <h1>{pokemon.id}</h1>
+        </div>
+
+        <form onSubmit={handleForm}>
+          <input id="input" type="text" placeholder="pokemon name"></input>
+        </form>
       </div>
-      
-      
-      
-      <form onSubmit={handleForm}>
-        <input id="input" type="text" placeholder="pokemon name"></input>
-      </form>
-      </div>
-     
     </div>
   );
 }
