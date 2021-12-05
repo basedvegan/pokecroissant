@@ -20,7 +20,11 @@ export default function Home() {
 
 const team = []
 
-const [teamCard, setTeamCard] = useState([])
+const [arr, setArr] = useState([]);
+
+console.log(arr)
+
+// const [teamCard, setTeamCard] = useState([])
 
 // const [team, setTeam] = useState([]);
 
@@ -41,15 +45,15 @@ const [teamCard, setTeamCard] = useState([])
 
   // console.log(pokemon);
 
-useEffect(()=> {
-// team.push(document.getElementById("pokeimg").src)
-setTeamCard(team)
-console.log(teamCard)
+// useEffect(()=> {
+// // team.push(document.getElementById("pokeimg").src)
+// setTeamCard(team)
+// console.log(teamCard)
 
-return () => {
-  //cleanup for when the component unmounts
-};
-}, []);
+// return () => {
+//   //cleanup for when the component unmounts
+// };
+// }, []);
 
 
 
@@ -97,8 +101,6 @@ return () => {
           <h1>{pokemon.name}</h1>
           <h1>{pokemon.id}</h1>
           <button onClick={addImgToTeam} >Add to Team</button>
-
-
         </div>
 
         <form onSubmit={handleForm}>
@@ -109,6 +111,13 @@ return () => {
                          return <Job props = {jobObj} />    */}
 
           </div>
+
+          <button
+        onClick={() => setArr((arr) => [...arr, image.front_default])}
+      >
+        push
+      </button>
+      <p>{JSON.stringify(arr)}</p>
 
       </div>
     </div>
