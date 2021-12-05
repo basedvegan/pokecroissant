@@ -41,6 +41,7 @@ export default function Home() {
 
   // console.log(pokemon);
 
+
   const handleForm = (e) => {
     e.preventDefault();
     console.log("hi");
@@ -48,6 +49,24 @@ export default function Home() {
     setPokename(value);
   };
 
+
+const handleRemoveItems = (e) => {
+
+
+  //  setArr(arr.filter(img => img.name !== name));
+  console.log("clicked")
+
+  setArr([])
+//    console.log(name)
+//    if(arr.includes(name)){
+//       arr.splice(arr.indexOf(name), 1);  //deleting
+//   }else{
+// console.log("nope")
+//   }
+//   console.log(arr);
+
+ };
+ 
   return (
     <div className="homeApp">
       <div className="nav">
@@ -88,9 +107,11 @@ export default function Home() {
           <div className="img-container">
             {/*Map out your job component below...  */}
             {arr.map((img) => {
-              return <Team props={img} />;
+              return <Team props={img} />
+              ; 
             })}
           </div>
+          <button onClick={handleRemoveItems}>reset team</button>
         </div>
       </div>
     </div>
