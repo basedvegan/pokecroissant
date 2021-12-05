@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .App {
   text-align: center;
   height: 100vh;
@@ -7,16 +9,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-.pokemon-name {
-  height: 200px;
-  width: 200px;
-}
-
 
 .signin-page {
   text-align: center;
@@ -27,8 +20,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-repeat: no-repeat;
-  
+  background-repeat: no-repeat;  
 }
 
 .title-nav {
@@ -37,6 +29,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pokemon-name {
+  height: 200px;
+  width: 200px;
 }
 
 .line-1 {
@@ -75,23 +72,6 @@ align-items: center;
 gap: 20px;
 }
 
-/* .title {
-  height: 400px;
-  width: 400px;
-} */
-
-/* .title {
-  background-image: url("/src/images/Pokemon-Logo.png");
-} */
-
-.team {
-  font-family: 'Press Start 2P', cursive;
-  position: absolute;
-  top:400px;
-
-}
-
-
 .pokeball {
   border-radius: 50%;
   mix-blend-mode: multiply;
@@ -108,8 +88,6 @@ gap: 20px;
   transform: rotate(45deg);
 }
 
-
-
 .click-ball {
   position: absolute;
   top:50px;
@@ -117,12 +95,6 @@ gap: 20px;
 }
 .click-ball:hover{
   cursor: pointer;
-}
-
-.audio {
-  height: 30px;
-  width: 500px;
-  margin-top: 50px;
 }
 
 .signin {
@@ -148,13 +120,29 @@ gap: 20px;
 .nav {
   display: flex;
   justify-content: space-around;
+  height: 30px;
+}
+
+.audio {
+  margin-top: 10px;
+  height: 20px;
+  width: 60px;
+}
+
+.sign-out {
+  margin-top: 10px;
+}
+.input-container{
+  margin-top: 100px;
 }
 
 .center-box {
-  
+  margin-top: -150px;;
   height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
 
 .cards {
   height: 300px;
@@ -169,7 +157,15 @@ gap: 20px;
   border-radius: 50%;
 }
 
-/* .lineupCard {
-    height: 50px;
-    width: 100px;
-} */
+.img-container {
+  width: 350px;
+  height:300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+}
+
+.team-img {
+  border: 3px solid white;
+  border-radius: 50%;
+}
