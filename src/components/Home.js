@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Pokecard from "./Pokecard";
 import { getAuth, signOut } from "firebase/auth";
 import { authentication } from "../firebase-config";
 import { useNavigate } from "react-router";
