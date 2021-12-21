@@ -41,7 +41,7 @@ export default function SignIn() {
             height="355px"
             width="350px"
           ></img>
-          <h1 className="click-ball">Log in</h1>
+          <h1 className="click-ball">Sign in</h1>
         </button>
         {/* <img className="pokeball" src="https://www.onlinepalette.com/wp-content/uploads/2021/07/Pokeball.png" alt="" height="100px" width="100px"></img> */}
         {/* <Link to = "/info"><button>Please Sign in</button></Link> */}
